@@ -1,13 +1,14 @@
 public class Exercicios {
 
-    public boolean aux(int a, int d){
+    public static boolean aux(int a, int d){
 
         if(a == 0) return true;
         if(d == 0) return false;
         return aux(++a, --d);
 
     }
-    public boolean ex1(int x) throws Exception{
+    //é negativo
+    public static boolean ex1(int x){
 
         // se positivo retornar falso
         // se negativo retorna true
@@ -17,6 +18,23 @@ public class Exercicios {
 
 
     }
+    //somar
+    public static int ex2(int x1, int x2){
+
+        if (x2 == 0) return x1 ;
+        if(ex1(x2))
+        {
+            return ex2(--x1, ++x2);
+        }
+
+        return ex2(++x1, --x2);
+
+
+    }
+
+
+
+
 
 
 
