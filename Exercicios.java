@@ -20,16 +20,21 @@ public class Exercicios {
     }
     //somar
     public static int ex2(int x1, int x2){
-
         if (x2 == 0) return x1 ;
         if(ex1(x2))
         {
             return ex2(--x1, ++x2);
         }
-
         return ex2(++x1, --x2);
+    }
 
-
+    //subtrair
+    public static int ex3(int x1, int x2){
+        if (x2 == 0) return x1;
+        if(ex1(x2)){
+            return ex3(++x1, ++x2);
+        }
+        return ex3(--x1, --x2);
     }
 
 
